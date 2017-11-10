@@ -93,10 +93,14 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 10. Una vez registrados, podemos efectuar una llamada. Vamos a probar con el servicio de eco de Ekiga que nos permite comprobar si nos hemos conectado correctamente. El servicio de eco tiene la dirección sip:500@ekiga.net. Veamos el INVITE de cerca.
  ** ¿Puede verse el nombre del que efectúa la llamada, así como su dirección SIP?
+	Si. Gregorio Robles con grex@ekiga.net desde 83.36.48.212
  ** ¿Qué es lo que contiene el cuerpo de la trama? ¿En qué formato/protocolo está?
+	Toda la descripción del SIP en SDP.
  ** ¿Tiene éxito el primer intento? ¿Cómo lo sabes?
+	Si ya que dos datagramas más adelante obtenemos una respuesta 200 OK.
  ** ¿En qué se diferencia el segundo INVITE más abajo del primero? ¿A qué crees que se debe esto?
-
+	El primero no es aceptado porque pide autenticación.
+	Vuelve a pedir autorización pero en este caso en el servidor proxy no el en Register.
 
 11. Una vez conectado, estudia el intercambio de tramas.
  ** ¿Qué protocolo(s) se utiliza(n)? ¿Para qué sirven estos protocolos?
@@ -104,7 +108,6 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
  ** ¿Se utilizan bits de padding?
  ** ¿Cuál es la periodicidad de los paquetes que se envían?
  ** ¿Cuántos bits/segundo estamos enviando?
-
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
