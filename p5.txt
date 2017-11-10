@@ -22,7 +22,11 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 3. Antes de analizar las tramas, mira las estadísticas generales que aparecen en el menú de Statistics. En el apartado de jerarquía de protocolos (Protocol Hierarchy) se puede ver el porcentaje del tráfico correspondiente al protocolo TCP y UDP.
  ** ¿Cuál de los dos es mayor? ¿Es esto consistente con una aplicación que transmite en tiempo real?
+	UDP = 96,2 % y TCP = 2,1 %
+	Si es consistente y normal que tengamos más porcentaje en paquetes UDP.
+	Una conexión de este tipo es mejor ya que necesitamos asegurar que los paquetes llegan dentro de unos límites al destinatario.
  ** ¿Qué otros protocolos podemos ver en la jerarquía de protocolos?
+	RTP, RTCP y HTTP.
 
 
 4. Observa por encima el flujo de tramas en el menú de Statistics en IO Graphs. La captura que estamos viendo incluye desde la inicialización (registro) de la aplicación hasta su finalización, con una llamada entremedias.
