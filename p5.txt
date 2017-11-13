@@ -54,7 +54,7 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
  ** ¿Qué dirección IP (de ekiga.net) devuelve el servicio de nombres?
 	86.64.162.35
-	
+
  ** ¿Por qué se pide también para 35.162.64.86.in-addr.arpa?
 	addr.arpa usa la resolución inversa por DNS, determina un nombre de dominio asociado a una IP.
 	Podemos ver que es la misma que ekiga.net pero al reves.
@@ -181,8 +181,13 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 14. En Telephony selecciona el menú VoIP calls. Verás que se lista la llamada de voz IP capturada en una ventana emergente. Selecciona esa llamada y pulsa el botón Graph.
  ** ¿Cuánto dura la conversación?
- ** ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
+ 	25 segundos. Del seg 14 de la captura al 39.
 
+ ** ¿Cuáles son sus SSRC? ¿Por qué hay varios SSRCs? ¿Hay CSRCs?
+ 	Synchronization Source Identifier. En nuestra captura tenemos dos: audio vídeo:
+    En los paquetes de G.711 -> 0xbf4afd37
+    En los paquetes de H.261 -> 0x43306582
+    No hay CSRCs. (Quiere decir que nuestros SSRCs no pasan por mezcladores y se envia cada uno por su lado).
 
 15. Identifica la trama donde se finaliza la conversación.
  ** ¿Qué método SIP se utiliza?
